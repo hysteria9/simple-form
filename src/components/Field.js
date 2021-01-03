@@ -13,7 +13,7 @@ const Field = (props) => {
   } = props;
   return (
     <div className={className}>
-      <label for={id} className="label">
+      <label htmlFor={id} className="label">
         {label}
       </label>
       <input

@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <body>
+    <div className="container">
       <main>
         <Title
           className="title"
@@ -74,7 +74,7 @@ function App() {
         ></Form>
         <Footer></Footer>
       </main>
-    </body>
+    </div>
   );
 }
 

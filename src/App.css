@@ -14,7 +14,7 @@ html {
   border: 10px solid #5c48d3;
 }
 
-body {
+.container {
   background-color: #fff;
   box-sizing: border-box;
   position: relative;
