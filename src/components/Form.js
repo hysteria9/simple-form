@@ -17,6 +17,8 @@ const Form = (props) => {
     handlePasswordChange,
     handleRepeatedPasswordChange,
     handleSubmit,
+    passwordVisibility,
+    setPasswordVisibility,
   } = props;
 
   const handleErrorName = () => {
@@ -40,8 +42,13 @@ const Form = (props) => {
     }
     return false;
   };
+
   const handleEdit = () => {
     return setSubmitted(false);
+  };
+
+  const handlePassWordVisibility = () => {
+    return setPasswordVisibility(!passwordVisibility);
   };
 
   return (
@@ -79,11 +86,12 @@ const Form = (props) => {
               handleErrorPassword() ? "field-with-error" : "field"
             }
             id="password"
-            type="password"
+            type={passwordVisibility ? "text" : "password"}
             label="Password"
             value={password}
             handler={handlePasswordChange}
             placeholder="********"
+            handlePassWordVisibility={handlePassWordVisibility}
           ></Field>
           <Field
             className="full-field"
@@ -91,11 +99,12 @@ const Form = (props) => {
               handleErrorPassword() ? "field-with-error" : "field"
             }
             id="repeated-password"
-            type="password"
+            type={passwordVisibility ? "text" : "password"}
             label="Confirm your password"
             value={repeatedPassword}
             handler={handleRepeatedPasswordChange}
             placeholder="********"
+            handlePassWordVisibility={handlePassWordVisibility}
           ></Field>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <button className="submit-btn" type="submit">

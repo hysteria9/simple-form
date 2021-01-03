@@ -10,6 +10,7 @@ function App() {
   const [password, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [passwordVisibility, setPasswordVisibility] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleNameChange = (event) => {
@@ -55,17 +56,15 @@ function App() {
         <Form
           className="main-div"
           name={name}
-          setName={setName}
           email={email}
-          setEmail={setEmail}
           password={password}
-          setPassword={setPassword}
           repeatedPassword={repeatedPassword}
-          setRepeatedPassword={setRepeatedPassword}
           submitted={submitted}
           setSubmitted={setSubmitted}
           errorMessage={errorMessage}
           setErrorMessage={setErrorMessage}
+          passwordVisibility={passwordVisibility}
+          setPasswordVisibility={setPasswordVisibility}
           handleNameChange={handleNameChange}
           handleEmailChange={handleEmailChange}
           handlePasswordChange={handlePasswordChange}

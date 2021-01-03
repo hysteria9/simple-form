@@ -17,7 +17,6 @@ html {
 .container {
   background-color: #fff;
   box-sizing: border-box;
-  position: relative;
   margin: 0;
   height: 100%;
   width: 100%;
@@ -87,16 +86,20 @@ main {
   /*border: #3b395a 1px solid;*/
 }
 
+form label {
+  margin-bottom: 8px;
+}
+
 .full-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 14px 0;
+  position: relative;
 }
 
 .field {
   padding: 0 10px;
-  margin-top: 8px;
   width: 240px;
   height: 24px;
   border-radius: 6px;
@@ -122,6 +125,22 @@ main {
   border-radius: 6px;
   color: #535079;
   border: 1px solid #c20000;
+}
+
+.password {
+  cursor: pointer;
+  position: absolute;
+  top: 32px;
+  right: 10px;
+  color: #535079;
+}
+
+.password:hover {
+  cursor: pointer;
+  position: absolute;
+  top: 32px;
+  right: 10px;
+  color: #5c48d3;
 }
 
 .error-message {
